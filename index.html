@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test - Hack Club Flavortown</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with logos -->
+        <div class="header">
+            <div class="logo-section">
+                <img src="logo-dark.png" alt="Dunajec Studio" class="logo logo-dark">
+                <img src="logo-light.png" alt="Dunajec Studio" class="logo logo-light">
+            </div>
+            <h1>⌨️ Typing Speed Test</h1>
+            <p class="subtitle">Hack Club Flavortown Edition</p>
+        </div>
+
+        <div class="game-info">
+            <div class="info-box">
+                <span class="label">Time:</span>
+                <span id="timer">60</span>s
+            </div>
+            <div class="info-box">
+                <span class="label">Score:</span>
+                <span id="score">0</span>
+            </div>
+            <div class="info-box">
+                <span class="label">WPM:</span>
+                <span id="wpm">0</span>
+            </div>
+            <div class="info-box">
+                <span class="label">Accuracy:</span>
+                <span id="accuracy">100</span>%
+            </div>
+        </div>
+
+        <div class="game-area" id="gameArea">
+            <div class="word-display" id="wordDisplay">Click to start!</div>
+            <input 
+                type="text" 
+                id="inputField" 
+                class="input-field" 
+                placeholder="Start typing here..."
+                disabled
+            >
+        </div>
+
+        <button id="startBtn" class="btn">Start Game</button>
+        <button id="resetBtn" class="btn btn-secondary">Reset</button>
+
+        <div class="game-over" id="gameOver" style="display: none;">
+            <h2>Game Over! 🏁</h2>
+            <p>Final WPM: <span id="finalWpm">0</span></p>
+            <p>Final Score: <span id="finalScore">0</span></p>
+            <p>Accuracy: <span id="finalAccuracy">0</span>%</p>
+            <button id="playAgainBtn" class="btn">Play Again</button>
+        </div>
+
+        <div class="footer">
+            <p>Made with ❤️ for Hack Club Flavortown</p>
+            <div class="footer-logos">
+                <img src="logo-light.png" alt="Dunajec Studio" class="logo logo-light">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
