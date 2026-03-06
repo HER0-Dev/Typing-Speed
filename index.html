@@ -11,11 +11,23 @@
         <!-- Header with logos -->
         <div class="header">
             <div class="logo-section">
-                <img src="logo-dark.png" alt="Dunajec Studio" class="logo logo-dark">
-                <img src="logo-light.png" alt="Dunajec Studio" class="logo logo-light">
+                <img src="logo.png" alt="Dunajec Studio" class="logo">
             </div>
             <h1>⌨️ Typing Speed Test</h1>
             <p class="subtitle">Hack Club Flavortown Edition</p>
+        </div>
+
+        <!-- Player Name Input -->
+        <div class="player-info" id="playerInfo">
+            <input 
+                type="text" 
+                id="playerNameInput" 
+                class="player-name-input" 
+                placeholder="Enter your nickname..."
+                maxlength="20"
+            >
+            <button id="setNameBtn" class="btn btn-set-name">Set Nickname</button>
+            <p class="current-player" id="currentPlayer">Player: <strong>Not set</strong></p>
         </div>
 
         <div class="game-info">
@@ -48,22 +60,34 @@
             >
         </div>
 
-        <button id="startBtn" class="btn">Start Game</button>
-        <button id="resetBtn" class="btn btn-secondary">Reset</button>
+        <div class="button-group">
+            <button id="startBtn" class="btn">Start Game</button>
+            <button id="resetBtn" class="btn btn-secondary">Reset</button>
+        </div>
 
+        <!-- Leaderboard -->
+        <div class="leaderboard-section">
+            <h2>🏆 Global Leaderboard</h2>
+            <div class="leaderboard-controls">
+                <button id="clearLeaderboardBtn" class="btn-small">Clear Local</button>
+                <button id="exportBtn" class="btn-small">Export</button>
+            </div>
+            <div id="leaderboardList"></div>
+        </div>
+
+        <!-- Game Over Modal -->
         <div class="game-over" id="gameOver" style="display: none;">
             <h2>Game Over! 🏁</h2>
+            <p><span id="gameOverPlayer"></span></p>
             <p>Final WPM: <span id="finalWpm">0</span></p>
             <p>Final Score: <span id="finalScore">0</span></p>
             <p>Accuracy: <span id="finalAccuracy">0</span>%</p>
             <button id="playAgainBtn" class="btn">Play Again</button>
         </div>
 
+        <!-- Footer with logos -->
         <div class="footer">
             <p>Made with ❤️ for Hack Club Flavortown</p>
-            <div class="footer-logos">
-                <img src="logo-light.png" alt="Dunajec Studio" class="logo logo-light">
-            </div>
         </div>
     </div>
 
